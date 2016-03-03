@@ -16,6 +16,11 @@ jdk:
   - OracleJDK7
   - OracleJDK8
 
+maven:
+  - Maven305
+  - Maven325
+  - Maven333
+  
 env:
   global:
     - JAVA_OPTS="-Xms64m"
