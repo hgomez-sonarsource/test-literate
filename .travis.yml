@@ -1,12 +1,19 @@
-global: FOO=BAR ALPHA=BETA
+language: java
+before_script:
+  - echo "before script"
+  - env
 
-environments:
-  
-  - [lrc-slave]
-  - [gva-slave]
+jdk:
+  - OracleJDK6
+  - OracleJDK7
+  - OracleJDK8
 
-build:
-  lrc-slave: echo La Roche at $FOO
-  gva-slave: echo Geneva at $ALPHA
-  
-build2: echo I'm building too!
+env:
+  global:
+    - JAVA_OPTS="-Xms64m"
+  matrix:
+    - TARGET='123'
+    - TARGET='456'
+    - TARGET='789'
+
+script: "java -version -Dmyval=$TARGET"
