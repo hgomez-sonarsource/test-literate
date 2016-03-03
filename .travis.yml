@@ -26,13 +26,11 @@ env:
 
 build:
     lrc-slave:
-      OracleJDK6: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
-      OracleJDK7: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
-      OracleJDK8: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK6: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK7: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK8: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
     gva-slave:
-      OracleJDK6: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
-      OracleJDK7: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
-      OracleJDK8: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
-
-mycommand: echo mycommand
+      OracleJDK6: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK7: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK8: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
 
