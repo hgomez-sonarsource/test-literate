@@ -18,9 +18,9 @@ jdk:
 
 env:
   matrix:
-    - BUILD_TYPE='compile'
-    - BUILD_TYPE='package'
-    - BUILD_TYPE='install'
+    - BUILD_TYPE=compile
+    - BUILD_TYPE=package
+    - BUILD_TYPE=install
 
 build:
     lrc-slave:
