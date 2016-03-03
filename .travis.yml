@@ -3,6 +3,14 @@ before_script:
   - echo "before script"
   - env
 
+environments:
+   - [lrc-slave, OracleJDK6]
+   - [gva-slave, OracleJDK6]
+   - [lrc-slave, OracleJDK7]
+   - [gva-slave, OracleJDK7]
+   - [lrc-slave, OracleJDK8]
+   - [gva-slave, OracleJDK8]
+
 jdk:
   - OracleJDK6
   - OracleJDK7
@@ -16,5 +24,15 @@ env:
     - TARGET='456'
     - TARGET='789'
 
-build: "java -version -Dmyval=$TARGET"
+build:
+    lrc-slave:
+      OracleJDK6: java -version
+      OracleJDK7: java -version
+      OracleJDK8: java -version
+    gva-slave:
+      OracleJDK6: java -version
+      OracleJDK7: java -version
+      OracleJDK8: java -version
+
+mycommand: echo mycommand
 
