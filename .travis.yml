@@ -1,3 +1,4 @@
+
 environments:
   global: FOO=BAR ALPHA=BETA
   - [lrc-slave]
