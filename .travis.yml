@@ -1,6 +1,7 @@
+global: FOO=BAR ALPHA=BETA
 
 environments:
-  global: FOO=BAR ALPHA=BETA
+  
   - [lrc-slave]
   - [gva-slave]
 
