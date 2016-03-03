@@ -1,9 +1,10 @@
 environments:
+  global: FOO=BAR ALPHA=BETA
   - [lrc-slave]
   - [gva-slave]
 
 build:
-  lrc-slave: echo La Roche
-  gva-slave: echo Geneva
+  lrc-slave: echo La Roche at $FOO
+  gva-slave: echo Geneva at $ALPHA
   
 build2: echo I'm building too!
