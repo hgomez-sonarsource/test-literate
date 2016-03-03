@@ -30,7 +30,7 @@ build:
       OracleJDK7: ./cix.sh
       OracleJDK8: ./cix.sh
     gva-slave:
-      OracleJDK6: mvn./cix.sh
+      OracleJDK6: ./cix.sh
       OracleJDK7: ./cix.sh
       OracleJDK8: ./cix.sh
 
