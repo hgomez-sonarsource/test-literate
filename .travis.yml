@@ -17,12 +17,10 @@ jdk:
   - OracleJDK8
 
 env:
-  global:
-    - JAVA_OPTS="-Xms64m"
   matrix:
-    - SQ_VERSION='5.1'
-    - SQ_VERSION='5.2'
-    - SQ_VERSION='5.3'
+    - BUILD_TYPE='compile'
+    - BUILD_TYPE='package'
+    - BUILD_TYPE='install'
 
 build:
     lrc-slave:
