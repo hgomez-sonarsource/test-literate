@@ -16,11 +16,6 @@ jdk:
   - OracleJDK7
   - OracleJDK8
 
-maven:
-  - Maven305
-  - Maven325
-  - Maven333
-  
 env:
   global:
     - JAVA_OPTS="-Xms64m"
@@ -31,11 +26,11 @@ env:
 
 build:
     lrc-slave:
-      OracleJDK6: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
-      OracleJDK7: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
-      OracleJDK8: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK6: ./cix.sh
+      OracleJDK7: ./cix.sh
+      OracleJDK8: ./cix.sh
     gva-slave:
-      OracleJDK6: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
-      OracleJDK7: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
-      OracleJDK8: mvn clean package && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK6: mvn./cix.sh
+      OracleJDK7: ./cix.sh
+      OracleJDK8: ./cix.sh
 
