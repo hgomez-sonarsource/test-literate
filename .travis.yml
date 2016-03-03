@@ -17,3 +17,4 @@ env:
     - TARGET='789'
 
 script: "java -version -Dmyval=$TARGET"
+install: /bin/true
