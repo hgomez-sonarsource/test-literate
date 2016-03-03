@@ -1,5 +1,9 @@
-env:
-  matrix:
-    - FOO=BAR
-    - FOO=BETA
-build: echo foo
+environments:
+  - [lrc-slave]
+  - [gva-slave]
+
+build:
+  lrc-slave: echo La Roche
+  gva-slave: echo Geneva
+  
+build2: echo I'm building too!
