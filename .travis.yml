@@ -20,19 +20,19 @@ env:
   global:
     - JAVA_OPTS="-Xms64m"
   matrix:
-    - TARGET='123'
-    - TARGET='456'
-    - TARGET='789'
+    - SQ_VERSION='5.1'
+    - SQ_VERSION='5.2'
+    - SQ_VERSION='5.3'
 
 build:
     lrc-slave:
-      OracleJDK6: java -version && echo $JAVA_OPTS && echo $TARGET
-      OracleJDK7: java -version && echo $JAVA_OPTS && echo $TARGET
-      OracleJDK8: java -version && echo $JAVA_OPTS && echo $TARGET
+      OracleJDK6: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK7: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK8: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
     gva-slave:
-      OracleJDK6: java -version && echo $JAVA_OPTS && echo $TARGET
-      OracleJDK7: java -version && echo $JAVA_OPTS && echo $TARGET
-      OracleJDK8: java -version && echo $JAVA_OPTS && echo $TARGET
+      OracleJDK6: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK7: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
+      OracleJDK8: java -version && echo $JAVA_OPTS && echo $SQ_VERSION
 
 mycommand: echo mycommand
 
