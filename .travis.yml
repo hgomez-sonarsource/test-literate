@@ -1,3 +1,5 @@
 env:
-  global: FOO=BAR ALPHA=BETA
+  matrix:
+    - FOO=BAR
+    - FOO=BETA
 build: echo foo
