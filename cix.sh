@@ -6,4 +6,4 @@ set -euo pipefail
 export MAVEN_HOME=/opt/sonarsource/ssmaven32/
 export PATH=$PATH:$MAVEN_HOME/bin
 
-mvn clean package
+mvn clean $BUILD_TYPE
